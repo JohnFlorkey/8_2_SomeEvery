@@ -49,7 +49,24 @@ Examples:
     hasNoDuplicates([1,2,3]) // true
 */
 
-function hasNoDuplicates(arr) {}
+function hasNoDuplicates(arr) {
+    // write has dupes and negate it
+    // return arr.every(function(value, i, copy){
+    //     console.log(`array is ${arr}`);
+    //     console.log(`value is ${value}`);
+    //     arr.shift();
+    //     let arrStr = arr.toString('');
+    //     console.log(`array after shift is ${arrStr}`);
+    //     console.log(`index of value is ${arrStr.indexOf(value)}`);
+    //     if(arrStr.indexOf(value) > -1){
+    //         console.log(`return is false`);
+    //         return false;
+    //     } else {
+    //         console.log('return is true');
+    //         return true;
+    //     }
+    // })
+}
 
 /*
 Write a function called hasCertainKey which accepts an array of objects and a key, and returns true if every single object in the array contains that key. Otherwise it should return false.
@@ -66,7 +83,11 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
-function hasCertainKey(arr, key) {}
+function hasCertainKey(arr, key) {
+    return arr.every(function(value){
+        return value[key];
+    })
+}
 
 /*
 Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
