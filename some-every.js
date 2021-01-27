@@ -50,22 +50,11 @@ Examples:
 */
 
 function hasNoDuplicates(arr) {
-    // write has dupes and negate it
-    // return arr.every(function(value, i, copy){
-    //     console.log(`array is ${arr}`);
-    //     console.log(`value is ${value}`);
-    //     arr.shift();
-    //     let arrStr = arr.toString('');
-    //     console.log(`array after shift is ${arrStr}`);
-    //     console.log(`index of value is ${arrStr.indexOf(value)}`);
-    //     if(arrStr.indexOf(value) > -1){
-    //         console.log(`return is false`);
-    //         return false;
-    //     } else {
-    //         console.log('return is true');
-    //         return true;
-    //     }
-    // })
+    return arr.every(function(value, index, copy){
+        return arr.filter(function(filterValue){
+            return filterValue === value;
+        }).length < 2
+    })
 }
 
 /*
